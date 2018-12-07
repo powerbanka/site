@@ -1,0 +1,416 @@
+/*-------------
+   Весь сайт   
+-------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*-------------
+  
+-------------*/
+html{
+	font:normal 1em 'roboto',sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+a.btn{
+	color: #fff;
+	border-radius: 0.2em;
+	text-transform: uppercase;
+	background-color: #2196F3;
+	font-weight: 600;
+	text-align: center;
+}
+
+hr{
+	width: 20%;
+	height: 2px;
+	background-color: #2196F3;
+	border: 0;
+	margin-bottom: 4%;
+}
+/* Разобраться со свойствами*/
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3% 8.2%;
+    
+}
+
+
+
+section h3.title{
+	color: #414a4f;
+	text-transform: uppercase; 
+	font: bold 1.4em 'Roboto Slab', serif;
+	margin-bottom: 3%;
+	text-align: center;
+}
+
+section p{
+	max-width: 100%;
+	text-align: center;
+	margin-bottom: 2%;
+	padding: 0 4%;
+	line-height: 1.4;
+    font: normal 1em 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/*-------------
+ 	
+-------------*/
+
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*-------------
+ 	
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+    z-index: 10;
+	width: 100%;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	color: #fff;
+	padding: 1% 5% 1% 3%;
+}
+
+header h2{
+	font: normal 1.4em 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-align: center;
+    width: 30%;
+}
+
+header nav{
+	display:flex;
+    width: 60%;
+    text-align: center
+}
+
+header nav li{
+    width: inherit;
+    margin: 0 3px;
+    font: normal 1.2em 'roboto', sans-serif;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+
+header nav li:first-child{
+	margin-left: 0;	
+}
+
+header nav li:last-child{
+	margin-right: 0;	
+}
+
+
+/*----------------
+ 	main Section
+----------------*/
+
+.main{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.main .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+	z-index: -1;
+}
+
+.main .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #414a4f;
+	opacity: 0.75;
+}
+
+.main h1{
+	font:normal 2.3em 'Roboto', sans-serif;
+    font-weight: 500;
+	margin-bottom: 2%;
+}
+
+.main h3{
+	font: 1.5em 'roboto', sans-serif;
+    font-weight: 300;
+	margin-bottom: 6%;
+}
+
+.main a.btn{
+	padding: 2% 4%;
+    border-radius: 2%;
+}
+
+
+
+
+
+/*------------------------------------
+ 	About section (О конференции)
+-------------------------------------*/
+
+.about{
+	background-color: #fff;
+    font: normal 1em 'roboto', sans-serif;
+}
+
+/*Разобраться*/
+.about .grid li{
+	padding: 0;
+	height: 60vh;
+	border-radius: 1%;
+	background-clip: content-box;
+	background-size:contain;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-color: #fff;
+}
+
+
+.about .grid li.large{
+	flex-basis: 80%;
+}
+
+
+/*----------------------
+ 	career Section
+----------------------*/
+
+.career{
+	background-color: #f7f7f7;
+    
+}
+
+.career .grid li{
+	padding: 0 4%;
+	flex-basis: 33%;
+	text-align: center;
+}
+
+.career .grid li i{
+    font-size: 3em;
+    color: #2196F3;
+    margin-bottom: 5%;
+}
+
+.career .grid li h4{
+	color: #555;
+    font: normal 1.5em 'Roboto', sans-serif;
+    margin-bottom: 7%;
+}
+
+.career .grid li p{
+    margin: 0;
+    font: normal 1em 'roboto', sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 1000px){
+
+	.career .grid li{
+		flex-basis: 70%;
+		margin-bottom: 65px;
+	}
+
+	.career .grid li:last-child{
+		margin-bottom: 0;
+	}
+
+}
+
+
+
+
+/*--------------------
+ 	speakers Section
+--------------------*/
+
+.speakers{
+	background-color: #fff;
+}
+
+.speakers .grid li {
+    padding: 1% 3%;
+	flex-basis: 33%;
+	text-align: center;
+}
+
+.speakers .speakers_name {
+    font: bold 1.2em 'roboto slab', sans-serif;
+    padding: 3% 0;
+}
+
+.speakers .grid .speakers_photo{
+    object-fit: scale-down ;
+    border-radius: 50%;
+    margin-bottom: 4%;
+}
+
+.speakers .grid .speakers_speech {
+    margin: 0;
+}
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+.partners{
+	background-color: #EFEEFD;
+}
+
+.partners .title {
+    font-size: 1.5em; 
+    margin-bottom: 2%;
+}
+
+.partners .grid li {
+    padding: 2% 2% ;
+	flex-basis: 20%;  
+    text-align: center;
+}
+
+.partners .grid li i{
+    font-size: 3em;
+    color:#2196F3;
+    margin: 0;
+}
+
+
+.contact{
+	background-color: #f7f7f7;
+}
+
+.contact .title {
+    font-size: 1.5em; 
+    margin-bottom: 2%;
+}
+
+.contact .grid li {
+    padding: 2% 2% ;
+	flex-basis: 23%;  
+    text-align: center;
+}
+
+.contact .grid li i{
+    font-size: 3em;
+    color:#2196F3;
+    margin: 0;
+}
+
+
+.offer_reg .title {
+    font-size: 1.2em; 
+    margin-bottom: 1.5%;
+}
+.offer_reg form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 800px;
+	width: 80%;
+}
+
+.offer_reg form input{
+	padding: 3%;
+	flex: 1;
+	margin-right: 10%;
+	font-size: 1em;
+	color: #555;
+}
+
+.offer_reg form .btn{
+	padding: 2% 4%;
+}
+
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 1% 1%;
+}
+
+footer ul{
+	display: flex;
+	margin-bottom: 2%;
+	font-size: 3em;
+}
+
+footer ul li{
+	margin: 0 1%;	
+}
+
+footer ul li:first-child{
+	margin-left: 0;	
+}
+
+footer ul li:last-child{
+	margin-right: 0;	
+}
+
+footer p{
+	font:normal 1em 'roboto', sans-serif ;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 0.2%;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+
+footer p a{
+	color: #fff;
+}
+
